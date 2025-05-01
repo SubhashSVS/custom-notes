@@ -1,7 +1,8 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts"
 import { createClient } from 'jsr:@supabase/supabase-js@2'
 
-
+//used get method to basically retrieve the data.
+//parameters are through the query parameter in url, but also can use jwt after auth implementation.
 Deno.serve(async (req) => {
   if(req.methid !== 'GET'){
     return new Response(JSON.stringify({
